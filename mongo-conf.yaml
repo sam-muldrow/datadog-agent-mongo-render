@@ -1,0 +1,21 @@
+init_config:
+instances:
+  - hosts:
+      - mongodb-r1zy:27017
+    username: datadog
+    password: "ENC[mongo_password]"
+    options:
+      authSource: admin
+    tls: true
+    dbm: true
+    cluster_name: 'cluster'
+    collections_indexes_stats: true
+    database_autodiscovery:
+      enabled: true
+      include:
+        - "^mydb.*"
+      exclude:
+        - "^mydb2.*"
+        - "admin$"
+      max_databases: 100
+      refresh_interval: 600
