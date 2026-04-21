@@ -26,4 +26,4 @@ ENV DD_BIND_HOST=$RENDER_SERVICE_NAME
 ENV DD_HOSTNAME=$RENDER_SERVICE_NAME
 
 # Add in Mongo Check as label
-COPY mongo_conf.yaml /etc/datadog-agent/conf.d/mongo.d/conf.yaml
+COPY mongo-conf.yaml /etc/datadog-agent/conf.d/mongo.d/conf.yaml
