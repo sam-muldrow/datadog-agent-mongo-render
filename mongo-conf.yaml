@@ -6,7 +6,7 @@ instances:
     password: "ENC[mongo_password]"
     options:
       authSource: admin
-    tls: true
+    tls: false
     dbm: true
     cluster_name: 'cluster'
     collections_indexes_stats: true
